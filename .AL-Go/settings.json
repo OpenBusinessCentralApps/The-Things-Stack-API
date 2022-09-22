@@ -6,6 +6,5 @@
     "testFolders":  [
         "TheThingsStackAPI.Test",
         "TheThingsStackAPI.Demo"
-    ],
-    "SendExtendedTelemetryToMicrosoft" : false
+    ]
 }
