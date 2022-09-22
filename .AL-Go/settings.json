@@ -1,7 +1,10 @@
 {
     "country":  "us",
     "appFolders":  [
+        "TheThingsStackAPI"
     ],
     "testFolders":  [
+        "TheThingsStackAPI.Test",
+        "TheThingsStackAPI.Demo"
     ]
 }

@@ -1,0 +1,44 @@
+{
+  "id": "4c51e3b6-e7fd-412c-884f-78cf35bd6025",
+  "name": "The Things Stack API Demo",
+  "publisher": "Open Business Central Apps",
+  "brief": "Demo for The Things Stack API",
+  "description": "Demo with examples for The Things Stack API",
+  "version": "20.0.0.0",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "https://openbcapps.com/The-Things-Stack-API",
+  "logo": "images/logo_TTN256x256.png",
+  "dependencies": [
+    {
+      "name": "The Things Stack API",
+      "publisher": "Open Business Central Apps",
+      "version": "20.0.0.0",
+      "id": "53189a3e-4dec-49ee-82dd-d3fa0a7bd5e7"
+    }
+  ],
+  "screenshots": [],
+  "application": "20.0.0.0",
+  "platform": "20.0.0.0",
+  "runtime": "9.2",
+  "target": "Cloud",
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "idRanges":[
+    {
+      "from": 50250,
+      "to": 50299
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://github.com/OpenBusinessCentralApps/The-Things-Stack-API",
+  "features": [
+    "TranslationFile"
+  ],
+  "supportedLocales": [
+    "en-US"
+  ]
+}

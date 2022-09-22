@@ -1,0 +1,38 @@
+{
+  "id": "53189a3e-4dec-49ee-82dd-d3fa0a7bd5e7",
+  "name": "The Things Stack API",
+  "publisher": "Open Business Central Apps",
+  "brief": "",
+  "description": "",
+  "version": "20.0.0.0",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "https://openbcapps.com/The-Things-Stack-API",
+  "logo": "images/logo_TTN256x256.png",
+  "dependencies": [
+  ],
+  "screenshots": [],
+  "platform": "20.0.0.0",
+  "application": "20.0.0.0",
+  "runtime": "9.2",
+  "target": "Cloud",
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "idRanges":[
+    {
+      "from": 52400,
+      "to": 52499
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://github.com/OpenBusinessCentralApps/The-Things-Stack-API",
+  "features": [
+    "TranslationFile"
+  ],
+  "supportedLocales": [
+    "en-US"
+  ]
+}
