@@ -36,8 +36,10 @@ defaults:
     shell: PowerShell
 
 jobs:
-  CreateTestApp:
+  Initialization:
     runs-on: [ windows-latest ]
+    outputs:
+      telemetryScopeJson: ${{ steps.init.outputs.telemetryScopeJson }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -48,21 +50,34 @@ jobs:
         with:
           eventId: "DO0095"
 
+  Update:
+    runs-on: [ windows-latest ]
+    needs: [ Initialization ]
+
+    steps:
       - name: Creating a new test app
         uses: microsoft/AL-Go-Actions/CreateApp@preview
         with:
-          parentTelemetryScopeJson: ${{ steps.init.outputs.telemetryScopeJson }}
+          parentTelemetryScopeJson: ${{ needs.Initialization.outputs.telemetryScopeJson }}
           project: ${{ github.event.inputs.project }}
           type: 'Test App'
-          name: ${{ github.event.inputs.name }}
           publisher: ${{ github.event.inputs.publisher }}
+          name: ${{ github.event.inputs.name }}
           idrange: ${{ github.event.inputs.idrange }}
           sampleCode: ${{ github.event.inputs.sampleCode }}
           directCommit: ${{ github.event.inputs.directCommit }}
 
+  PostProcess:
+    if: always()
+    runs-on: [ windows-latest ]
+    needs: [ Initialization, Update ]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Finalize the workflow
-        if: always()
+        id: PostProcess
         uses: microsoft/AL-Go-Actions/WorkflowPostProcess@preview
         with:
           eventId: "DO0095"
-          telemetryScopeJson: ${{ steps.init.outputs.telemetryScopeJson }}
+          telemetryScopeJson: ${{ needs.Initialization.outputs.telemetryScopeJson }}

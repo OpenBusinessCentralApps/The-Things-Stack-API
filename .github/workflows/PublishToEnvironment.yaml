@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       appVersion:
-        description: App version to deploy to environment(s) (current, prerelease, draft, latest or version number)
+        description: App version to deploy (current, prerelease, draft, latest or version number)
         required: false
         default: 'current'
       environmentName:
@@ -24,9 +24,6 @@ jobs:
     runs-on: [ windows-latest ]
     outputs:
       telemetryScopeJson: ${{ steps.init.outputs.telemetryScopeJson }}
-      settings: ${{ steps.ReadSettings.outputs.SettingsJson }}
-      environments: ${{ steps.ReadSettings.outputs.EnvironmentsJson }}
-      environmentCount: ${{ steps.ReadSettings.outputs.EnvironmentCount }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -37,19 +34,30 @@ jobs:
         with:
           eventId: "DO0097"
 
+  Analyze:
+    runs-on: [ windows-latest ]
+    needs: [ Initialization ]
+    outputs:
+      settings: ${{ steps.ReadSettings.outputs.SettingsJson }}
+      environments: ${{ steps.ReadSettings.outputs.EnvironmentsJson }}
+      environmentCount: ${{ steps.ReadSettings.outputs.EnvironmentCount }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Read settings
         id: ReadSettings
         uses: microsoft/AL-Go-Actions/ReadSettings@preview
         with:
-          parentTelemetryScopeJson: ${{ steps.init.outputs.telemetryScopeJson }}
-          getEnvironments: ${{ github.event.inputs.environmentName }}
+          parentTelemetryScopeJson: ${{ needs.Initialization.outputs.telemetryScopeJson }}
+          getEnvironments: '${{ github.event.inputs.environmentName }}'
           includeProduction: 'Y'
 
   Deploy:
-    needs: [ Initialization ]
-    if: ${{ needs.Initialization.outputs.environmentCount > 0 }}
+    needs: [ Analyze ]
+    if: ${{ needs.Analyze.outputs.environmentCount > 0 }}
     strategy: ${{ fromJson(needs.Initialization.outputs.environments) }}
-    runs-on: ${{ fromJson(matrix.os) }}
+    runs-on: ${{ matrix.os }}
     name: Deploy to ${{ matrix.environment }}
     environment:
       name: ${{ matrix.environment }}
@@ -72,7 +80,7 @@ jobs:
           secrets: ${{ toJson(secrets) }}
         with:
           settingsJson: ${{ env.Settings }}
-          secrets: '${{ steps.envName.outputs.envName }}-AuthContext,${{ steps.envName.outputs.envName }}_AuthContext,AuthContext,${{ steps.envName.outputs.envName }}-EnvironmentName,${{ steps.envName.outputs.envName }}_EnvironmentName,EnvironmentName,Projects'
+          secrets: '${{ steps.envName.outputs.envName }}-AuthContext,${{ steps.envName.outputs.envName }}_AuthContext,AuthContext,${{ steps.envName.outputs.envName }}-EnvironmentName,${{ steps.envName.outputs.envName }}_EnvironmentName,EnvironmentName'
 
       - name: AuthContext
         id: authContext
@@ -104,40 +112,26 @@ jobs:
             $environmentName = '${{ steps.envName.outputs.envName }}'
           }
           $environmentName = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes(($environmentName + '${{ matrix.environment }}'.SubString($envName.Length)).ToUpperInvariant()))
-
-          $projects = [System.Environment]::GetEnvironmentVariable("$($envName)-Projects")
-          if (-not $projects) {
-            $projects = [System.Environment]::GetEnvironmentVariable("$($envName)_Projects")
-            if (-not $projects) {
-              $projects = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String([System.Environment]::GetEnvironmentVariable('projects')))
-            }
-          }
-          if ($projects -eq '') {
-            $projects = '*'
-          }
-
           Write-Host "::set-output name=authContext::$authContext"
           Write-Host "set-output name=authContext::$authContext"
           Write-Host "::set-output name=environmentName::$environmentName"
           Write-Host "set-output name=environmentName::$environmentName"
-          Write-Host "::set-output name=projects::$projects"
-          Write-Host "set-output name=projects::$projects"
 
       - name: Deploy
         uses: microsoft/AL-Go-Actions/Deploy@preview
         env:
-          authContext: ${{ steps.authContext.outputs.authContext }}
+          authContext: '${{ steps.authContext.outputs.authContext }}'
         with:
           parentTelemetryScopeJson: ${{ needs.Initialization.outputs.telemetryScopeJson }}
           type: 'Publish'
-          projects: ${{ steps.authContext.outputs.projects }}
-          environmentName: ${{ steps.authContext.outputs.environmentName }}
+          projects: '${{ secrets.Projects }}'
+          environmentName: '${{ steps.authContext.outputs.environmentName }}'
           artifacts: ${{ github.event.inputs.appVersion }}
 
   PostProcess:
     if: always()
     runs-on: [ windows-latest ]
-    needs: [ Initialization, Deploy ]
+    needs: [ Initialization, Analyze, Deploy ]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
