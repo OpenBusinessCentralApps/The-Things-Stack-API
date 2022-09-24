@@ -6,7 +6,7 @@ on:
     paths-ignore:
       - 'README.md'
       - '.github/**'
-       - 'Docs/**'
+      - 'Docs/**'
     branches: [ 'main', 'release/*', 'feature/*' ]
   pull_request:
     paths-ignore:
@@ -52,7 +52,7 @@ jobs:
         with:
           parentTelemetryScopeJson: ${{ steps.init.outputs.telemetryScopeJson }}
           getProjects: 'Y'
-          getEnvironments: '*'
+          getEnvironments: ''
 
       - name: Read secrets
         uses: microsoft/AL-Go-Actions/ReadSecrets@preview
