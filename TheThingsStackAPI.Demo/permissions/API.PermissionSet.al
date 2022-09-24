@@ -1,8 +1,8 @@
-permissionset 50250 "obc TTS Demo SDK"
+permissionset 50250 "obc TTS Demo API"
 {
-    Caption = 'The Things Stack SDK Demo';
-    Assignable = true;
     Access = Public;
+    Assignable = true;
+    Caption = 'The Things Stack API Demo';
     IncludedPermissionSets = "obc TTS API";
     Permissions =
         tabledata "obc TTS Demo API Key" = RIMD,
