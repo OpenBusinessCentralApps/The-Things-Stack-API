@@ -16,4 +16,4 @@ The Things Stack is an enterprise grade LoRaWAN network server, built on an open
 
 ### Support or Contact
 
-Having trouble with The Things Stack API? Check out my [documentation](https://github.com/OpenBusinessCentralApps/tree/main/Docs/) or [contact support](https://github.com/OpenBusinessCentralApps/The-Things-Stack-API/issues) and we’ll help you sort it out.
+Having trouble with The Things Stack API? Check out my [documentation](https://github.com/OpenBusinessCentralApps/The-Things-Stack-API/tree/main/Docs) or [contact support](https://github.com/OpenBusinessCentralApps/The-Things-Stack-API/issues) and we’ll help you sort it out.
