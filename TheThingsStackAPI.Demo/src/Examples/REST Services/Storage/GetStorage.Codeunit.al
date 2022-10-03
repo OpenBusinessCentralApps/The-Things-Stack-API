@@ -1,4 +1,4 @@
-codeunit 50255 "obc TTS Demo GetStorage"
+codeunit 77185 "obc TTS Demo GetStorage"
 {
     Access = Internal;
     Description = 'Code sample how to use GetStorage API';

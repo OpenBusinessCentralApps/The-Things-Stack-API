@@ -1,4 +1,4 @@
-table 50252 "obc TTS Demo Application"
+table 77182 "obc TTS Demo Application"
 {
     DataClassification = CustomerContent;
     TableType = Temporary;

@@ -1,4 +1,4 @@
-codeunit 50253 "obc TTS Demo GetDevices"
+codeunit 77183 "obc TTS Demo GetDevices"
 {
     Access = Internal;
     Description = 'Code sample how to use GetDevices API';

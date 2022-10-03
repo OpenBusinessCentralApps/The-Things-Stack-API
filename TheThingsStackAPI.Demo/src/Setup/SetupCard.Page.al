@@ -1,4 +1,4 @@
-page 50253 "obc TTS Demo Setup Card"
+page 77182 "obc TTS Demo Setup Card"
 {
     PageType = Card;
     ApplicationArea = All;

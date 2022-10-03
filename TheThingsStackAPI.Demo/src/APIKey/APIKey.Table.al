@@ -1,4 +1,4 @@
-table 50250 "obc TTS Demo API Key"
+table 77180 "obc TTS Demo API Key"
 {
     DataClassification = AccountData;
     LookupPageId = "obc TTS Demo API Key List";

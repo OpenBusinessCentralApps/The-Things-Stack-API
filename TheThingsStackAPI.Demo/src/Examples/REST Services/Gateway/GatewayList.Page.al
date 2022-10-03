@@ -1,4 +1,4 @@
-page 50258 "obc TTS Demo Gateway List"
+page 77184 "obc TTS Demo Gateway List"
 {
 
     ApplicationArea = All;

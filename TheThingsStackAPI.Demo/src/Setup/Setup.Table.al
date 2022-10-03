@@ -1,4 +1,4 @@
-table 50251 "obc TTS Demo Setup"
+table 77181 "obc TTS Demo Setup"
 {
     DataClassification = SystemMetadata;
     Access = Internal;

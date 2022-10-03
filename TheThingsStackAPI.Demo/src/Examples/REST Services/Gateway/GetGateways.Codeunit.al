@@ -1,4 +1,4 @@
-codeunit 50254 "obc TTS Demo GetGateways"
+codeunit 77184 "obc TTS Demo GetGateways"
 {
     Access = Internal;
     Description = 'Code sample how to use GetGateways API';

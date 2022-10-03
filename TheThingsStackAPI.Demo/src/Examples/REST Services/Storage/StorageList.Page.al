@@ -1,4 +1,4 @@
-page 50260 "obc TTS Demo Storage List"
+page 77186 "obc TTS Demo Storage List"
 {
 
     ApplicationArea = All;

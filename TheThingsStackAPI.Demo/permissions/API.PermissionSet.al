@@ -1,4 +1,4 @@
-permissionset 50250 "obc TTS Demo API"
+permissionset 77180 "obc TTS Demo API"
 {
     Access = Public;
     Assignable = true;

@@ -1,4 +1,4 @@
-codeunit 50252 "obc TTS Demo GetApplications"
+codeunit 77182 "obc TTS Demo GetApplications"
 {
     Access = Internal;
     Description = 'Code sample how to use GetApplications API';

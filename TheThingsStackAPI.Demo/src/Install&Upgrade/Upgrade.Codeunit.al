@@ -1,4 +1,4 @@
-codeunit 50251 "obc TTS Demo Upgrade"
+codeunit 77181 "obc TTS Demo Upgrade"
 {
     Subtype = Upgrade;
 

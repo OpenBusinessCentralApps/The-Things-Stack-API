@@ -1,4 +1,4 @@
-codeunit 50250 "obc TTS Demo Install"
+codeunit 77180 "obc TTS Demo Install"
 {
     Subtype = Install;
 

@@ -1,4 +1,4 @@
-table 50254 "obc TTS Demo Device"
+table 77184 "obc TTS Demo Device"
 {
     TableType = Temporary;
 

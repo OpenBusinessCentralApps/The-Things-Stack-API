@@ -1,4 +1,4 @@
-page 50259 "obc TTS Demo Device List"
+page 77185 "obc TTS Demo Device List"
 {
 
     ApplicationArea = All;

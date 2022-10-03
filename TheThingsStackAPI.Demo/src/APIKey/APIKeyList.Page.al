@@ -1,4 +1,4 @@
-page 50251 "obc TTS Demo API Key List"
+page 77181 "obc TTS Demo API Key List"
 {
     PageType = List;
     ApplicationArea = All;
