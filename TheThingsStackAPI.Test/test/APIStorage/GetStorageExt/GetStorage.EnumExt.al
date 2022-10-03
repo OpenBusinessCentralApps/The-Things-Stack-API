@@ -1,4 +1,4 @@
-enumextension 50105 "obc TTS Test GetStorage" extends "obc TTS API GetStoredAppUp"
+enumextension 77152 "obc TTS Test GetStorage" extends "obc TTS API GetStoredAppUp"
 {
     value(50100; "Test")
     {

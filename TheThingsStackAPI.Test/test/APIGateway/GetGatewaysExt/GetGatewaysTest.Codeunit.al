@@ -1,4 +1,4 @@
-codeunit 50104 "obc TTS Test GetGateways Test" implements "obc TTS IGetGateways"
+codeunit 77153 "obc TTS Test GetGateways Test" implements "obc TTS IGetGateways"
 {
     procedure GetGateways(Cluster: enum "obc TTS Cluster Address"; Parameter: Dictionary of [enum "obc TTS Param GetGateways", Text]; var HttpResponse: HttpResponseMessage): Boolean;
     var

@@ -1,4 +1,4 @@
-codeunit 50106 "obc TTS Test API Storage"
+codeunit 77155 "obc TTS Test API Storage"
 {
     Subtype = Test;
     TestPermissions = Disabled;

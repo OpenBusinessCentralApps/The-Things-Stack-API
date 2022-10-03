@@ -1,4 +1,4 @@
-codeunit 50109 "obc TTS Test API Gateway"
+codeunit 77158 "obc TTS Test API Gateway"
 {
     Subtype = Test;
     TestPermissions = Disabled;

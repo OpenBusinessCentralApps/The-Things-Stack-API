@@ -1,4 +1,4 @@
-codeunit 50108 "obc TTS Test API Device"
+codeunit 77157 "obc TTS Test API Device"
 {
     Subtype = Test;
     TestPermissions = Disabled;

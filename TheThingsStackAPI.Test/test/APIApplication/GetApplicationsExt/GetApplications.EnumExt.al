@@ -1,4 +1,4 @@
-enumextension 50102 "obc TTS Test GetApplications" extends "obc TTS API GetApplications"
+enumextension 77149 "obc TTS Test GetApplications" extends "obc TTS API GetApplications"
 {
     value(50100; "Test")
     {

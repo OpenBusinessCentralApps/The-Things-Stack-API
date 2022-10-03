@@ -1,4 +1,4 @@
-codeunit 50105 "obc TTS Test Storage Test" implements "obc TTS IGetStoredAppUp"
+codeunit 77154 "obc TTS Test Storage Test" implements "obc TTS IGetStoredAppUp"
 {
     procedure GetStoredApplicationUp(Cluster: enum "obc TTS Cluster Address"; Parameter: Dictionary of [enum "obc TTS Param GetStoredAppUp", Text]; var HttpResponse: HttpResponseMessage): Boolean;
     var

@@ -1,4 +1,4 @@
-codeunit 50102 "obc TTS Test GetAppl. Test" implements "obc TTS IGetApplications"
+codeunit 77151 "obc TTS Test GetAppl. Test" implements "obc TTS IGetApplications"
 {
 
     procedure GetApplications(Cluster: enum "obc TTS Cluster Address"; Parameter: Dictionary of [enum "obc TTS Param GetApplications", Text]; var HttpResponse: HttpResponseMessage): Boolean;
