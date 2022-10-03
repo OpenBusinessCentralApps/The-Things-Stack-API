@@ -1,4 +1,4 @@
-enum 52403 "obc TTS API GetDevices" implements "obc TTS IGetDevices"
+enum 77103 "obc TTS API GetDevices" implements "obc TTS IGetDevices"
 {
     Extensible = true;
     DefaultImplementation = "obc TTS IGetDevices" = "obc TTS GetDevicesv3";

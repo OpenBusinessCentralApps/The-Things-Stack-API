@@ -1,4 +1,4 @@
-codeunit 52403 "obc TTS Upgrade"
+codeunit 77103 "obc TTS Upgrade"
 {
     Subtype = Upgrade;
     Access = Internal;

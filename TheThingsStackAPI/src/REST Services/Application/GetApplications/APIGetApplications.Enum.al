@@ -1,4 +1,4 @@
-enum 52401 "obc TTS API GetApplications" implements "obc TTS IGetApplications"
+enum 77101 "obc TTS API GetApplications" implements "obc TTS IGetApplications"
 {
     Extensible = true;
     Access = Public;

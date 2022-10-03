@@ -1,4 +1,4 @@
-codeunit 52400 "obc TTS API Application"
+codeunit 77100 "obc TTS API Application"
 {
     Access = Public;
     Description = 'The Things Stack Application API. For further documentation vistis: https://www.thethingsindustries.com/docs/reference/api/application/';

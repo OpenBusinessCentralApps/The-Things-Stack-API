@@ -1,4 +1,4 @@
-codeunit 52410 "obc TTS GetApplicationsv3" implements "obc TTS IGetApplications"
+codeunit 77110 "obc TTS GetApplicationsv3" implements "obc TTS IGetApplications"
 {
     Access = Internal;
     procedure GetApplications(Cluster: Enum "obc TTS Cluster Address"; Parameter: Dictionary of [enum "obc TTS Param GetApplications", Text]; var HttpResponse: HttpResponseMessage): Boolean;

@@ -1,4 +1,4 @@
-codeunit 52411 "obc TTS GetDevicesv3" implements "obc TTS IGetDevices"
+codeunit 77111 "obc TTS GetDevicesv3" implements "obc TTS IGetDevices"
 {
     Access = Internal;
     procedure GetDevices(Cluster: Enum "obc TTS Cluster Address"; Parameter: Dictionary of [enum "obc TTS Param GetDevices", Text]; var HttpResponse: HttpResponseMessage): Boolean;

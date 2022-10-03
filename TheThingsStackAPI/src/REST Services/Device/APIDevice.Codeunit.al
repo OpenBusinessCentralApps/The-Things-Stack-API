@@ -1,4 +1,4 @@
-codeunit 52405 "obc TTS API Device"
+codeunit 77105 "obc TTS API Device"
 {
     Access = Public;
     Description = 'The Things Stack Device API. For further documentation vistis: https://www.thethingsindustries.com/docs/reference/api/end_device/';

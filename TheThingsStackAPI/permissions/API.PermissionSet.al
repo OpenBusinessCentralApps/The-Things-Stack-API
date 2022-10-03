@@ -1,4 +1,4 @@
-permissionset 52400 "obc TTS API"
+permissionset 77100 "obc TTS API"
 {
     Caption = 'The Things Stack API';
     Assignable = false;

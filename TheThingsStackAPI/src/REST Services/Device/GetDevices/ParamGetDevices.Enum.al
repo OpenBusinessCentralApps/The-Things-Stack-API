@@ -1,4 +1,4 @@
-enum 52404 "obc TTS Param GetDevices"
+enum 77104 "obc TTS Param GetDevices"
 {
     Extensible = true;
     Access = Public;

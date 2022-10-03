@@ -1,4 +1,4 @@
-enum 52405 "obc TTS API GetGateways" implements "obc TTS IGetGateways"
+enum 77105 "obc TTS API GetGateways" implements "obc TTS IGetGateways"
 {
     Extensible = true;
     Access = Public;

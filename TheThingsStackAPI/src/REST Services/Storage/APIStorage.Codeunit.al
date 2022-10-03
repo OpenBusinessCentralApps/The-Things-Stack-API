@@ -1,4 +1,4 @@
-codeunit 52406 "obc TTS API Storage"
+codeunit 77106 "obc TTS API Storage"
 {
     Access = Public;
     Description = 'The Things Stack Storage Integration API. For further documentation visit: https://www.thethingsindustries.com/docs/reference/api/storage_integration/';

@@ -1,4 +1,4 @@
-enum 52408 "obc TTS Param GetStoredAppUp"
+enum 77108 "obc TTS Param GetStoredAppUp"
 {
     Extensible = true;
     Access = Public;

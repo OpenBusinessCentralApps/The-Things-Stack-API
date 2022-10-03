@@ -1,4 +1,4 @@
-codeunit 52401 "obc TTS API Gateway"
+codeunit 77101 "obc TTS API Gateway"
 {
     Access = Public;
     Description = 'The Things Stack Gateway API. For further documentation visit: https://www.thethingsindustries.com/docs/reference/api/gateway/';

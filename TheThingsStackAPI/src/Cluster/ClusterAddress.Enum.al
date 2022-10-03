@@ -1,4 +1,4 @@
-enum 52400 "obc TTS Cluster Address" implements "obc TTS IClusterAddress"
+enum 77100 "obc TTS Cluster Address" implements "obc TTS IClusterAddress"
 {
     Access = Public;
     Extensible = true;

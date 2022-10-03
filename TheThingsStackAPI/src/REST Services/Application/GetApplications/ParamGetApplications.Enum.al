@@ -1,4 +1,4 @@
-enum 52402 "obc TTS Param GetApplications"
+enum 77102 "obc TTS Param GetApplications"
 {
     Extensible = true;
     Access = Public;

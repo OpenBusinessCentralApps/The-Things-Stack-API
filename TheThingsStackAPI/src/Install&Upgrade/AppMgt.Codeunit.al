@@ -1,4 +1,4 @@
-codeunit 52404 "obc TTS App Mgt."
+codeunit 77104 "obc TTS App Mgt."
 {
     Access = Public;
 

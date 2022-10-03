@@ -1,4 +1,4 @@
-codeunit 52408 "obc TTS REST Helper"
+codeunit 77108 "obc TTS REST Helper"
 {
     Access = Public;
 

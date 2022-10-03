@@ -1,4 +1,4 @@
-codeunit 52412 "obc TTS GetGatewaysv3" implements "obc TTS IGetGateways"
+codeunit 77112 "obc TTS GetGatewaysv3" implements "obc TTS IGetGateways"
 {
     Access = Internal;
     procedure GetGateways(Cluster: Enum "obc TTS Cluster Address"; Parameter: Dictionary of [enum "obc TTS Param GetGateways", Text]; var HttpResponse: HttpResponseMessage): Boolean;

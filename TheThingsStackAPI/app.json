@@ -24,8 +24,8 @@
   },
   "idRanges":[
     {
-      "from": 52400,
-      "to": 52499
+      "from": 77100,
+      "to": 77149
     }
   ],
   "contextSensitiveHelpUrl": "https://github.com/OpenBusinessCentralApps/The-Things-Stack-API",

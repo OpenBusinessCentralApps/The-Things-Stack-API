@@ -1,4 +1,4 @@
-codeunit 52402 "obc TTS Install"
+codeunit 77102 "obc TTS Install"
 {
     Subtype = Install;
     Access = Internal;

@@ -1,4 +1,4 @@
-codeunit 52407 "obc TTS eu1 Cluster" implements "obc TTS IClusterAddress"
+codeunit 77107 "obc TTS eu1 Cluster" implements "obc TTS IClusterAddress"
 {
     Access = Internal;
     Description = 'For further documentation visit: https://www.thethingsindustries.com/docs/getting-started/ttn/addresses/';

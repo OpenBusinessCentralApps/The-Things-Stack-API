@@ -1,4 +1,4 @@
-enum 52407 "obc TTS API GetStoredAppUp" implements "obc TTS IGetStoredAppUp"
+enum 77107 "obc TTS API GetStoredAppUp" implements "obc TTS IGetStoredAppUp"
 {
     Extensible = true;
     Access = Public;

@@ -1,4 +1,4 @@
-codeunit 52409 "obc TTS Default Cluster" implements "obc TTS IClusterAddress"
+codeunit 77109 "obc TTS Default Cluster" implements "obc TTS IClusterAddress"
 {
     Access = Internal;
 

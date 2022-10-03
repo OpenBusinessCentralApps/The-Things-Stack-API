@@ -1,4 +1,4 @@
-codeunit 52413 "obc TTS GetStoredAppUpv3" implements "obc TTS IGetStoredAppUp"
+codeunit 77113 "obc TTS GetStoredAppUpv3" implements "obc TTS IGetStoredAppUp"
 {
     Access = Internal;
     procedure GetStoredApplicationUp(Cluster: Enum "obc TTS Cluster Address"; Parameter: Dictionary of [enum "obc TTS Param GetStoredAppUp", Text]; var HttpResponse: HttpResponseMessage): Boolean;
